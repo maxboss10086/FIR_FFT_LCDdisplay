@@ -1,0 +1,15 @@
+D:/project/FPGA/Verilog_maxboss/46_FIR_audio_lcd/sim/IIC_dri_sim/tb_iic_dri.v {1 {vlog -work work2 D:/project/FPGA/Verilog_maxboss/46_FIR_audio_lcd/sim/IIC_dri_sim/tb_iic_dri.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module spi_dri_tb
+
+Top level modules:
+	spi_dri_tb
+
+} {} {}} D:/project/FPGA/Verilog_maxboss/46_FIR_audio_lcd/sim/IIC_dri_sim/i2c_dri.v {1 {vlog -work work2 D:/project/FPGA/Verilog_maxboss/46_FIR_audio_lcd/sim/IIC_dri_sim/i2c_dri.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module i2c_dri
+
+Top level modules:
+	i2c_dri
+
+} {} {}}

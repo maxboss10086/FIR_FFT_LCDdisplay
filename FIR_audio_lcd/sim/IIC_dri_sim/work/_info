@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\project\FPGA\Verilog_maxboss\46_FIR_audio_lcd\sim\IIC_dri_sim
+vi2c_dri
+Z1 !s100 g^@DTZ7`HX`?n]zeeK?Qj2
+Z2 ID9bFR=S^QWFoHJ]?^lC0R0
+Z3 VHU0HJV9^7DSLF44IQlBIl0
+Z4 dD:\project\FPGA\Verilog_maxboss\46_FIR_audio_lcd\sim\IIC_dri_sim
+Z5 w1565667015
+Z6 8D:/project/FPGA/Verilog_maxboss/46_FIR_audio_lcd/sim/IIC_dri_sim/i2c_dri.v
+Z7 FD:/project/FPGA/Verilog_maxboss/46_FIR_audio_lcd/sim/IIC_dri_sim/i2c_dri.v
+L0 22
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|D:/project/FPGA/Verilog_maxboss/46_FIR_audio_lcd/sim/IIC_dri_sim/i2c_dri.v|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1569553026.997000
+Z12 !s107 D:/project/FPGA/Verilog_maxboss/46_FIR_audio_lcd/sim/IIC_dri_sim/i2c_dri.v|
+!s101 -O0
+vspi_dri_tb
+!i10b 1
+!s100 bdR:hbdQldg`I@mFEaGkX3
+I=UXO6JcV<YATC:acLNPL<3
+Z13 Vd@8i]SMo=?n^lMddL2CDJ3
+R4
+w1569552999
+Z14 8D:/project/FPGA/Verilog_maxboss/46_FIR_audio_lcd/sim/IIC_dri_sim/tb_iic_dri.v
+Z15 FD:/project/FPGA/Verilog_maxboss/46_FIR_audio_lcd/sim/IIC_dri_sim/tb_iic_dri.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1569553027.104000
+!s107 D:/project/FPGA/Verilog_maxboss/46_FIR_audio_lcd/sim/IIC_dri_sim/tb_iic_dri.v|
+Z16 !s90 -reportprogress|300|-work|work|D:/project/FPGA/Verilog_maxboss/46_FIR_audio_lcd/sim/IIC_dri_sim/tb_iic_dri.v|
+!s101 -O0
+R10

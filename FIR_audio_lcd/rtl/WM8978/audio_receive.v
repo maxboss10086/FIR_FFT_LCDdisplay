@@ -1,0 +1,94 @@
+//****************************************Copyright (c)***********************************//
+// 网站博客: NC 
+// 版权所有, 盗版必究 
+// Copyright (c) 2020
+// ALL right reserved
+//----------------------------------------------------------------------------------------//
+// File name: 		xxx.v
+// Descriptions: 	接收输入的音频信号，解析音频协议，输出有效数据
+// Author: 		Max
+// Creation Date:	Tue Jan 14 2018 12:58:25 GMT+0800
+//----------------------------------------------------------------------------------------//
+// Note:
+//
+//----------------------------------------------------------------------------------------//
+//****************************************************************************************//
+
+
+
+module audio_receive #(parameter WL = 6'd32) (      // WL(word length音频采样精度定义)
+    //system clock 50MHz
+    input                 rst_n     ,               // 复位信号
+
+    //wm8978 interface
+    input                 aud_bclk  ,               // WM8978位时钟
+    input                 aud_lrc   ,               // 对齐信号
+    input                 aud_adcdat,               // 音频输入,wm8978送入音频模拟数据
+
+    //user interface
+    output   reg          rx_done   ,               // FPGA接收数据完成,用于开启FIFO写入数据
+    output   reg [31:0]   adc_data                  // FPGA通过程序识别协议中的数据,将数据交给FFT
+);
+
+//reg define
+reg              aud_lrc_d0;                        // aud_lrc延迟一个时钟周期
+reg    [ 5:0]    rx_cnt;                            // 发送数据计数
+reg    [31:0]    adc_data_t;                        // 预输出的音频数据的暂存值
+
+//wire define
+wire             lrc_edge ;                         // 边沿信号
+
+//*****************************************************
+//**                    main code
+//*****************************************************
+
+
+
+
+//为了在aud_lrc变化的第二个AUD_BCLK上升沿采集aud_adcdat,延迟打拍采集
+always @(posedge aud_bclk or negedge rst_n) begin
+    if(!rst_n) begin
+        aud_lrc_d0 <= 1'b0;
+    end
+    else
+        aud_lrc_d0 <= aud_lrc;
+end
+assign   lrc_edge = aud_lrc & (~aud_lrc_d0);          // LRC信号的单边沿检测，因为FIR是单通道数据
+//assign   lrc_edge = aud_lrc ^ aud_lrc_d0;           // LRC信号双边沿检测
+
+
+//对采集的32位音频数据的计数
+always @(posedge aud_bclk or negedge rst_n) begin
+    if(!rst_n) begin
+        rx_cnt <= 6'd0;
+    end
+    else if(lrc_edge == 1'b1)
+        rx_cnt <= 6'd0;
+    else if(rx_cnt < 6'd35)
+        rx_cnt <= rx_cnt + 1'b1;
+end
+
+//把采集到的音频数据临时存放在一个寄存器内
+always @(posedge aud_bclk or negedge rst_n) begin
+    if(!rst_n) begin
+        adc_data_t <= 32'b0;
+    end
+    else if((aud_lrc) && (rx_cnt < WL))
+        adc_data_t[WL - 1'd1 - rx_cnt] <= aud_adcdat;//aud_adcdat是串行信号
+end
+
+//把临时数据传递给adc_data,并使能rx_done,表明一次采集完成
+always @(posedge aud_bclk or negedge rst_n) begin
+    if(!rst_n) begin
+        rx_done   <=  1'b0;
+        adc_data  <= 32'b0;
+    end
+    else if(rx_cnt == 6'd32) begin
+        rx_done <= 1'b1;//数据标记
+        adc_data<= adc_data_t;//接收数据
+    end
+    else
+        rx_done <= 1'b0;
+end
+
+endmodule

@@ -1,0 +1,127 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 224 176)
+	(text "lcd_top" (rect 5 0 46 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 144 25 156)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk_50m" (rect 0 0 46 14)(font "Arial" (font_size 8)))
+		(text "clk_50m" (rect 21 27 67 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "clk_10m" (rect 0 0 46 14)(font "Arial" (font_size 8)))
+		(text "clk_10m" (rect 21 43 67 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "rst_n" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "rst_n" (rect 21 59 50 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "fft_data[15..0]" (rect 0 0 80 14)(font "Arial" (font_size 8)))
+		(text "fft_data[15..0]" (rect 21 75 101 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "fft_sop" (rect 0 0 41 14)(font "Arial" (font_size 8)))
+		(text "fft_sop" (rect 21 91 62 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "fft_eop" (rect 0 0 41 14)(font "Arial" (font_size 8)))
+		(text "fft_eop" (rect 21 107 62 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "fft_vaild" (rect 0 0 46 14)(font "Arial" (font_size 8)))
+		(text "fft_vaild" (rect 21 123 67 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "lcd_hs" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "lcd_hs" (rect 150 27 187 41)(font "Arial" (font_size 8)))
+		(line (pt 208 32)(pt 192 32))
+	)
+	(port
+		(pt 208 48)
+		(output)
+		(text "lcd_vs" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "lcd_vs" (rect 150 43 187 57)(font "Arial" (font_size 8)))
+		(line (pt 208 48)(pt 192 48))
+	)
+	(port
+		(pt 208 64)
+		(output)
+		(text "lcd_de" (rect 0 0 37 14)(font "Arial" (font_size 8)))
+		(text "lcd_de" (rect 150 59 187 73)(font "Arial" (font_size 8)))
+		(line (pt 208 64)(pt 192 64))
+	)
+	(port
+		(pt 208 80)
+		(output)
+		(text "lcd_rgb[15..0]" (rect 0 0 77 14)(font "Arial" (font_size 8)))
+		(text "lcd_rgb[15..0]" (rect 110 75 187 89)(font "Arial" (font_size 8)))
+		(line (pt 208 80)(pt 192 80)(line_width 3))
+	)
+	(port
+		(pt 208 96)
+		(output)
+		(text "lcd_bl" (rect 0 0 33 14)(font "Arial" (font_size 8)))
+		(text "lcd_bl" (rect 154 91 187 105)(font "Arial" (font_size 8)))
+		(line (pt 208 96)(pt 192 96))
+	)
+	(port
+		(pt 208 112)
+		(output)
+		(text "lcd_rst" (rect 0 0 38 14)(font "Arial" (font_size 8)))
+		(text "lcd_rst" (rect 149 107 187 121)(font "Arial" (font_size 8)))
+		(line (pt 208 112)(pt 192 112))
+	)
+	(port
+		(pt 208 128)
+		(output)
+		(text "lcd_pcll" (rect 0 0 42 14)(font "Arial" (font_size 8)))
+		(text "lcd_pcll" (rect 145 123 187 137)(font "Arial" (font_size 8)))
+		(line (pt 208 128)(pt 192 128))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 144))
+	)
+)

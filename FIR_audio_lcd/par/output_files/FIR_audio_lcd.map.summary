@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Jan 14 15:07:52 2020
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : FIR_audio_lcd
+Top-level Entity Name : FIR_audio_lcd_top
+Family : Cyclone IV E
+Total logic elements : 9,182
+    Total combinational functions : 7,365
+    Dedicated logic registers : 7,751
+Total registers : 7751
+Total pins : 31
+Total virtual pins : 0
+Total memory bits : 26,920
+Embedded Multiplier 9-bit elements : 28
+Total PLLs : 1
